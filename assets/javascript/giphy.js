@@ -31,11 +31,15 @@ var topics = ["The Big Bang Theory", "New Girl", "The Walking Dead", "Super Stor
     	$("#addShow").on("click", function(event){
     		event.preventDefault();
     		//Takes the input value from the textbox
-    		var show = $("#showInput").val().trim();
-    		//Adding movie from the text box to the array
-    		topics.push(show);
-    		//Calling render function to handel processing of the show array
-    		renderButtons();
+    		var show = $("#showInput").val().trim().toLowerCase();
+            if (topics.indexOf(show)> -1){
+                alert("Show already exist! Choose another show please!");
+            }else {
+                //Adding movie from the text box to the array
+                topics.push(show);
+                //Calling render function to handel processing of the show array
+                renderButtons();
+            }
     	});
 
     	function displayShowInfo(){
