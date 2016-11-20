@@ -49,7 +49,7 @@ var topics = ["The Big Bang Theory", "New Girl", "The Walking Dead", "Super Stor
     		var show = $(this).data("name");
     		console.log(show);
     		//URL for API call
-    		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=dc6zaTOxFJmzC&limit=10";
+    		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=dc6zaTOxFJmzC&limit=10";
     		//ajax call to retreive information from the API
     		$.ajax({ url: queryURL, method: "GET"}).done(function(resoponse){
     			var results = resoponse.data;
