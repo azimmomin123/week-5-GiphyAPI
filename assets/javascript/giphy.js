@@ -37,7 +37,7 @@ var topics = ["The Big Bang Theory", "New Girl", "The Walking Dead", "Super Stor
             }else {
                 //Adding movie from the text box to the array
                 topics.push(show);
-                $("#showInput").val("");
+                $("#showInput").val("");   
                 //Calling render function to handel processing of the show array
                 renderButtons();
             }
