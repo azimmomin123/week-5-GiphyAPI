@@ -5,21 +5,37 @@
 	<title>TV Shows Gifs</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-	<!-- Rendered Buttons will get dumboed here -->
-	<div id="buttonsView"></div>
 
-	<form id="showForm">
-		<label for="showInput">Add a Show Here!</label>
-		<input type="text" id="showInput">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Giphy App</h1>      
+			<p>We are using the GIPHY API to make a dynamic web page that populates with gifs of your choice.</p>
 
-		<!-- Button Trigger new show to be added -->
-		<input type="submit" id="addShow" value="Add A Show Here">
-	</form>
+			<form id="showForm">
+				<label for="showInput">Add a Show Here!</label>
+				<input type="text" id="showInput">
 
-	<!-- Shows will get dumped here -->
-	<div id="showView"></div>
+				<!-- Button Trigger new show to be added -->
+				<input type="submit" id="addShow" value="Add A Show Here">
+			</form>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-body">Your GIPHY Buttons:</div>
+			<div class="panel-footer">
+				<!-- Rendered Buttons will get dumboed here -->
+				<div id="buttonsView"></div>
+			</div>
+			
+		</div>
+		<!-- Shows will get dumped here -->
+     	<div id="showView"></div>
+	</div>
+	
+
 
 	<!-- Script -->
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
